@@ -1,3 +1,5 @@
+upper text -Raleway", Arial, sans-serif;
+
 
 TITLE: 
 Flew - Fully Responsive Free HTML5 template

@@ -304,7 +304,8 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-header {
   width: 100%;
-  margin: 0;
+  margin-top: 5px;
+  border-bottom: 5px solid #27E1CE
 }
 @media screen and (max-width: 768px) {
   #fh5co-header {
@@ -312,10 +313,9 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 #fh5co-header .header-inner {
-  height:auto;
+  height: 80px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top:20px;
   float: left;
   width: 100%;
   -webkit-border-radius: 7px;
@@ -332,8 +332,8 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-header h1 a {
   position: relative;
-  
-  color: black;
+  color: rgba(0, 0, 0, 0.7);
+  border:3px; border-style:solid; border-color:rgba(0, 0, 0, 0.7);padding-left:0.15em;
 }
 #fh5co-header h1 a > span {
   color: #27E1CE;
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header h1 a:after {
   position: absolute;
   bottom: 6px;
-  right: -8px;
+  right: -14px;
   content: '';
   width: 8px;
   height: 8px;
@@ -356,13 +356,10 @@ h1, h2, h3, h4, h5, h6, figure {
   border-radius: 50%;
 }
 #fh5co-header h1, #fh5co-header nav {
-  margin: 0 0 0 0;
-  padding-left:20px;
-  padding-right:20px;
+  margin: 38px 0 0 0;
 }
 #fh5co-header nav {
   float: right;
-  padding-top:60px;
 }
 @media screen and (max-width: 768px) {
   #fh5co-header nav {
@@ -375,7 +372,7 @@ h1, h2, h3, h4, h5, h6, figure {
   line-height: 0;
 }
 #fh5co-header nav ul li {
-  padding: 0;
+  padding: 0 20px 0 20px;
   margin: 0;
   list-style: none;
   display: -moz-inline-stack;
@@ -386,9 +383,9 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-header nav ul li a {
   color: rgba(0, 0, 0, 0.7);
   font-size: 18px;
-  padding: 25px;
+  padding: 10px;
   position: relative;
-  -webkit-transition: 0.2s;
+  -webkit-transition: 0.2s;px\
   -o-transition: 0.2s;
   transition: 0.2s;
 }
@@ -551,19 +548,16 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
-.bordershadow
-{
-	box-shadow:0 0 6px rgba(35, 173, 255, 1);
-}
-
 #fh5co-services-section .services {
   position: relative;
 }
+
+
 #fh5co-services-section .services i {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 40px;
+  font-size: 50px;
   color: #27E1CE;
 }
 #fh5co-services-section .services .desc {
@@ -573,14 +567,24 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 20px;
   font-weight: 700;
 }
-#fh5co-services-section .services .desc h3:hover{
-	font-size:22px;
-	margin:0 0 28px 0;
-	}
-
+#fh5co-services-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow:3px 2px #C0C0C0
+}
+#fh5co-services-section p i{
+letter-spacing:0.2em;
+}
 .fh5co-services {
   margin-top: 4em;
 }
+
+/* jumbotron border shadow*/
+.bordershadow {
+	border: 3px solid ;
+	border-image:   linear-gradient(to right, green 25%, yellow 50%,red 75%, black 100%) 100;
+}
+	
 
 #fh5co-work-section .item-grid {
   width: 100%;
@@ -620,7 +624,34 @@ h1, h2, h3, h4, h5, h6, figure {
   top: -2px;
 }
 
+#fh5co-work-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow:3px 2px #C0C0C0
+}
+#fh5co-work-section p i{
+letter-spacing:0.2em;
+}
 
+#fh5co-services-section p i{
+letter-spacing:0.2em;
+}
+
+.fh5co-about .fh5co-heading h2{
+	font-size: 40px;
+	font-weight: 400;
+	text-shadow:3px 2px #C0C0C0
+}
+
+.fh5co-about .fh5co-heading p i{
+	letter-spacing:0.2em;
+}
+
+/*.fh5co-about{
+	border-top: 5px solid #27E1CE;
+	border-image:   linear-gradient(to right, green 25%, yellow 50%,red 75%, black 100%) 100;
+}
+*/
 
 .flip-container {
 	perspective: 1000px;
@@ -669,6 +700,16 @@ h1, h2, h3, h4, h5, h6, figure {
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+#fh5co-testimony-section h2 {
+  font-size: 40px;
+  font-weight: 400;
+  text-shadow:3px 2px #C0C0C0;
+  font-style: normal;
+}
+#fh5co-testimony-section p i{
+letter-spacing:0.2em;
 }
 
 .wrap-testimony {
@@ -760,16 +801,16 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-position: center center;
 }
-#fh5co-blog-section .item-grid .back .v-align {
-  padding-top: 30px;
+#fh5co-blog-section .item-grid .v-align {
+  padding: 30px;
 }
-#fh5co-blog-section .item-grid .back .v-align h5 {
+#fh5co-blog-section .item-grid .v-align h3 {
   font-weight: 700;
   font-size: 20px;
 }
 #fh5co-blog-section .item-grid .v-align h5 {
-/*color: rgba(0, 0, 0, 0.3);*/}
-
+  color: rgba(0, 0, 0, 0.3);
+}
 #fh5co-blog-section .item-grid .v-align p {
   color: gray;
 }
@@ -822,15 +863,10 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #55acee;
 }
 
+.fh5co-about,
 .fh5co-team,
 .fh5co-contact {
   padding: 7em 0;
-}
-
-
-.fh5co-about
-{   
-	padding:7em 3em 4em 3em;
 }
 @media screen and (max-width: 768px) {
   .fh5co-about,
@@ -944,7 +980,6 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 3em 0;
   }
 }
-
 #fh5co-footer h2, #fh5co-footer h3, #fh5co-footer h4 {
   color: #fff;
 }
@@ -1281,10 +1316,6 @@ h1, h2, h3, h4, h5, h6, figure {
   display: block;
   text-transform: uppercase;
   color: #888f94;
-}
-
-.clearfix {
-    overflow: auto;
 }
 
 .fh5co-light-grey-section {

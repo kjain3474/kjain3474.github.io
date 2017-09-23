@@ -39,9 +39,10 @@
 	<meta name="twitter:card" content="" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="images\valji.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -63,89 +64,42 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+	<script>
+	function show(){
+	document.getElementById("values").style.display="block";
+	}
 	
-	<style>
-	#loader {
-	align:center;
-  position:relative;
-  margin-top:15%;
-  left: 40%;
-  z-index: 1;
-  border: 16px solid #f4f4f4;
-  border-radius: 50%;
-  border-top: 16px solid black;
-  border-right: 16px solid yellow;
-  border-bottom: 16px solid red;
-  border-left: 16px solid green;
-  width: 200px;
-  height: 200px;
-  -webkit-animation: spin 2s linear infinite;
-  animation: spin 2s linear infinite;
-  padding:100px;
-}
-}
-
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Add animation to "page content" */
-.animate-bottom {
-  position: relative;
-  -webkit-animation-name: animatebottom;
-  -webkit-animation-duration: 1s;
-  animation-name: animatebottom;
-  animation-duration: 1s
-}
-
-@-webkit-keyframes animatebottom {
-  from { bottom:-100px; opacity:0 } 
-  to { bottom:0px; opacity:1 }
-}
-
-@keyframes animatebottom { 
-  from{ bottom:-100px; opacity:0 } 
-  to{ bottom:0; opacity:1 }
-}
-
-</style>
+	</script>
+	
 	</head>
-	<body onload="myFunction()" style="margin:0;">
-	
-	<div id="loader"></div>
-	
-	<div  style="display:none;" id="myDiv" class="animate-bottom">
+    <body>
+	<div id="fh5co-page">
+<div class="animate-box item-grid">
 	<header id="fh5co-header" role="banner">
 		<div class="container">
 			<div class="header-inner">
-				<h1><a href="index.html"><img src="C:\Users\user1\Desktop\flew\images\valji.png" width="100%"></img></a></h1>
+			<h1><a href="index.html" style="text-shadow: 3px 2px #C0C0C0;letter-spacing:8px;font-weight: bold;font-size: 1.7em">Valji</a></h1>
 				<nav role="navigation">
-					<ul
+					<ul>
 						<li><a href="work.html">Work</a></li>
 						<li><a href="C:/Users/user1/Desktop/flew/index#service">Services</a></li>
 						<li><a href="pricing.html">Pricing</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">Contact</a></li>
-						<li class="cta"><a href="#">Get started</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
 	</header>
 	
-	<div class="container">
-		
-	</div>
+</div>
+	
+
+	<section id="service">
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/a1.jpg);">
+		   	<li style="background-image: url(images/slide_1.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
@@ -156,7 +110,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/a2.jpg);">
+		   	<li style="background-image: url(images/slide_2.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -166,7 +120,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/a3.jpg);">
+		   	<li style="background-image: url(images/slide_3.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -179,45 +133,47 @@
 		  	</ul>
 	  	</div>
 	</aside>
+	</section>
 	
-	<div class="fh5co-about animate-box fh5co-light-grey-section">
-	<div class="container-fluid">
+	<section id="AboutUs">
+<div class="fh5co-about animate-box fh5co-light-grey-section">
+	<div class="container">
        <div class="row">
-		<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 			<h2>About Us</h2>
-			<p>With a presence of more than five decades in the textile industry, Darshan Valji is one of the top players in this segment and has emerged as a clear leader in the Corporate, Industrial & School Uniform segment. With a wide range of varied types of fabrics, sold under the brand name”Valji”, the company’s fabrics are always favored over others when it comes to quality, designs & patterns </p>
+			<p><i>"With a presence of more than five decades in the textile industry, Darshan Valji is one of the top players in this segment and has emerged as a clear leader in the Corporate, Industrial & School Uniform segment. With a wide range of varied types of fabrics, sold under the brand name ”Valji”, the company’s fabrics are always favored over others when it comes to quality, designs & patterns"</i></p>
 		</div>	
 		</div>
 	 
 		
-		<div class="jumbotron bordershadow">
-		 <div class="row">
-		 <div class="container">
-			<div class="col-md-4 col-sm-6 animate-box">
-				<figure>
-					<img src="images/valji.png" alt="Free HTML5 Template" class="img-responsive">
-				</figure>
+	<div class="jumbotron bordershadow">
+		<div class="row">
+			<div class="container">
+				<div class="col-md-2 col-sm-6 animate-box" style="float:left;padding-right:20px">
+					<figure>
+						<img src="images/valji.png" alt="Free HTML5 Template" class="img-responsive">
+					</figure>
 			</div>
-			<div class="col-md-8 col-sm-6 animate-box">
-				<h2>A TEXTILE FIRM</h2>
-				<p>100 years back Shri Tekchand Himatmalji Kothari came to Mumbai from a remote village called Bagol in Rajasthan with a dream of realizing his potential in this city. Initially to sustain he worked in various firms in the city which also gave him a wider perspective and a deep understanding about various businesses. In a few years he was joined by his brother Shri Tilokchandji Himatmalji Kothari and both started a Adhat Pedhi in the name of Tilokchand Rajkamal Adat. The business started flourishing and Shri Vastimal Tilokchandji Kothari also joined this family pedi business. 
+			<div class="col-md-10 col-sm-6 animate-box">
+				<h2 style="font-family:Arial">A TEXTILE FIRM IN THE MAKING ...</h2>
+				<p style="font-family:none">100 years back Shri Tekchand Himatmalji Kothari came to Mumbai from a remote village called Bagol in Rajasthan with a dream of realizing his potential in this city. Initially to sustain he worked in various firms in the city which also gave him a wider perspective and a deep understanding about various businesses. In a few years he was joined by his brother Shri Tilokchandji Himatmalji Kothari and both started a Adhat Pedhi in the name of Tilokchand Rajkamal Adat. The business started flourishing and Shri Vastimal Tilokchandji Kothari also joined this family pedi business. 
 				Thus the foundation was firmly laid for other ventures to come.
 				Shri Balchandji Kothari, son of Shri Vastimalji Kothari joined the family adat business. In 1981 he started the textile trading company specializing in uniform fabrics. In early 90’s Shri Balchandji Kothari launched the school uniform fabrics manufacturing unit.
 				Since then there has been no looking back, and today Darshan Valji Uniforms is amongst the largest and one of the most respected uniform manufacturing and exporting company of India.</p>
 				<p><button onclick="show()" class="btn btn-primary btn-outline with-arrow">Core Values<i class="icon-arrow-right"></i></button></p>
 	            
 			</div>
-         </div>
+			</div>
 		</div>
-		<div class="row" id="values" style="display:none;">
-		<div class="col-md-offset-4 col-md-8">
-		 <div class="panel-group" id="accordion">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Mission</a>
-        </h4>
-      </div>
+	<div class="row" id="values" style="display:none;">
+		<div class="col-md-offset-2 col-md-10">
+			<div class="panel-group" id="accordion">
+				<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Mission</a>
+					</h4>
+				</div>
       <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">To achieve our objectives in an environment of fairness, honesty, and courtesy towards our clients, employees, vendors and society at large.
 <br>
@@ -250,15 +206,15 @@
 	</div>
 	</div>
 	</div>
-
+</section>
 	
 	<section id="service">
 	<div id="fh5co-services-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Our Products</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					<p><i>"Our fibres can be used in their 100% form, or be blended with all natural and synthetic fibres for enhanced comfort, feel and lustre. Over the years, our fibres have found new and path-breaking innovations to add comfort to your life."</i></p>
 				</div>
 			</div>
 			<div class="row">
@@ -266,8 +222,8 @@
 					<div class="services">
 						<i class="icon-bomb"></i>
 						<div class="desc">
-							<h3>Dashboard</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+							<h3>Play School</h3>
+							<p>Our skin-friendly fabrics are extremely popular in the trade because of their softness and feel which is a must for the little toddlers in uniforms whose parents do not want any irritation on the sensitive skins of their child.</p>
 						</div>
 					</div>
 				</div>
@@ -275,8 +231,8 @@
 					<div class="services">
 						<i class="icon-server"></i>
 						<div class="desc">
-							<h3>Administration</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+							<h3>School</h3>
+							<p>Our school uniform fabrics are highly demanded for their distinct shades, colors as per the quality norms. The uniform fabrics are checked on various defined parameters in order to face the stringent industry standards.</p>
 						</div>
 					</div>
 				</div>
@@ -284,8 +240,8 @@
 					<div class="services">
 						<i class="icon-money"></i>
 						<div class="desc">
-							<h3>Make Money</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+							<h3>Corporate</h3>
+							<p>We are regarded as one of the most renowned manufacturer for all types of corporate wear. With the aid of our large production and excellent storage facility, we have been able to manage bulk demands in the most efficient manner.</p>
 						</div>
 					</div>
 				</div>
@@ -293,132 +249,72 @@
 					<div class="services">
 						<i class="icon-tablet"></i>
 						<div class="desc">
-							<h3>SEO Monitoring</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
+							<h3>Industrial</h3>
+							<p>Our Industrial uniform fabrics are well known for their durability because once stitched the uniform gets exposed to harsh and tough work environment. To ensure this the fabrics goes stringent quality checks at all stages of production.</p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-line-chart"></i>
-						<div class="desc">
-							<h3>Online Marketing</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4 animate-box">
-					<div class="services">
-						<i class="icon-pie-chart"></i>
-						<div class="desc">
-							<h3>Business Analytics</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-						</div>
-					</div>
-				</div>
+		
 			</div>
 		</div>
 	</div>
-	
 	</section>
-	
-	
-	
+
+
 	<div id="fh5co-work-section" class="fh5co-light-grey-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
-					<h2>Latest Projects</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+					<h2>What We Stand For</h2>
+					<p><i>"We believe that Fashion is a language that creates itself in clothes to interpret reality."<i></p>
 				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-md-4 animate-box">
-				  <div class="item-grid text-center">
-					<div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-						<div class="flipper">
-							<div class="front">
-			<!-- front content -->
-			                <img class="image" src="images\patternwoven.jpg"></img>
-					       </div>
-				<div class="back">
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/quality_fabric.jpg)"></div>
+					</div>
+				</div>
 				
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Web Application</h5>
-						
-			<!-- back content -->
+				<div class="col-md-4 animate-box">
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/patternwoven.jpg)"></div>
+					</div>
 				</div>
-						</div>
-					</div>		
-		           </div>
+				
+				<div class="col-md-4 animate-box">
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/superior_finishing.jpg)"></div>
+					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(images/image_2.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">User Interface</h5>
-							</div>
-						</div>
-					</a>
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/extensive_collection.jpg)"></div>
+					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(images/image_3.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Branded</h5>
-							</div>
-						</div>
-					</a>
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/innovative_design.jpg)"></div>
+					</div>
 				</div>
 				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(images/image_4.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Web</h5>
-							</div>
-						</div>
-					</a>
+					<div class="item-grid text-center">
+						<div class="image" style="background-image: url(images/wide_variety.jpg)"></div>
+					</div>
 				</div>
-				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(images/image_5.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Illustration</h5>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 animate-box">
-					<a href="#" class="item-grid text-center">
-						<div class="image" style="background-image: url(images/image_6.jpg)"></div>
-						<div class="v-align">
-							<div class="v-align-middle">
-								<h3 class="title">Geographical App</h3>
-								<h5 class="category">Web Application</h5>
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-12 text-center animate-box">
-					<p><a href="#" class="btn btn-primary with-arrow">View More Projects <i class="icon-arrow-right"></i></a></p>
-				</div>
+				
 			</div>
 		</div>
 	</div>
+	
+<section id="testimony">
 	<div id="fh5co-testimony-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
 					<h2>Clients Feedback</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					<p><i>"We all need people who will give us feedback. That’s how we improve." <i></p>
 				</div>
 			</div>
 			<div class="row">
@@ -464,6 +360,7 @@
 			</div>
 		</div>
 	</div>
+</section>
 	<div id="fh5co-blog-section" class="fh5co-light-grey-section">
 		<div class="container">
 			<div class="row">
@@ -607,23 +504,7 @@
 		</div>
 	</footer>
 	</div>
-	<script>
-	var myVar;
 	
-	function show(){
-	document.getElementById("values").style.display="block";
-	}
-
-	function myFunction() {
-		myVar = setTimeout(showPage, 3000);
-	}
-
-	function showPage() {
-	document.getElementById("loader").style.display = "none";
-	document.getElementById("myDiv").style.display = "block";
-	}
-	</script>
-
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
