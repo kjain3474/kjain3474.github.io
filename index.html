@@ -39,6 +39,10 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Google Map -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCefOgb1ZWqYtj7raVSmN4PL2WkTrc-KyA&sensor=false"></script>
+	<script src="js/google_map.js"></script>
+	
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -52,6 +56,46 @@
 	}
 	
 	</script>
+	
+	
+	<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 	<!-- Start WOWSlider.com HEAD section -->
 <link rel="stylesheet" type="text/css" href="engine1/style.css" />
 <script type="text/javascript" src="engine1/jquery.js"></script>
@@ -70,7 +114,8 @@
 						<li><a href="#products">Products</a></li>
 						<li><a href="#stand">Our Stand</a></li>
 						<li><a href="#collections">Collections</a></li>
-						<li><a href="#testimony">Feedback</a></li>
+						<!--<li><a href="#testimony">Feedback</a></li>!-->
+						<li><a href="#Contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -84,7 +129,7 @@
 	<aside id="fh5co-hero" class="js-fullheight">
 		<div class="flexslider js-fullheight">
 			<ul class="slides">
-		   	<li style="background-image: url(images/a1.jpg);">
+		   	<li style="background-image: url(images/slide_1.jpg);">
 		   		<div class="overlay-gradient"></div>
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
@@ -94,7 +139,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/a2.jpg);">
+		   	<li style="background-image: url(images/slide_2.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -103,7 +148,7 @@
 		   			</div>
 		   		</div>
 		   	</li>
-		   	<li style="background-image: url(images/a3.jpg);">
+		   	<li style="background-image: url(images/slide_3.jpg);">
 		   		<div class="container">
 		   			<div class="col-md-10 col-md-offset-1 text-center js-fullheight slider-text">
 		   				<div class="slider-text-inner">
@@ -137,8 +182,8 @@
 					</figure>
 			</div>
 			<div class="col-md-10 col-sm-6 animate-box">
-				<h2 style="font-family:Arial">TEXTILE FIRM IN THE MAKING ...</h2>
-				<p style="font-family:none">100 years back Shri Tekchand Himatmalji Kothari came to Mumbai from a remote village called Bagol in Rajasthan with a dream of realizing his potential in this city. Initially to sustain he worked in various firms in the city which also gave him a wider perspective and a deep understanding about various businesses. In a few years he was joined by his brother Shri Tilokchandji Himatmalji Kothari and both started a Adhat Pedhi in the name of Tilokchand Rajkamal Adat. The business started flourishing and Shri Vastimal Tilokchandji Kothari also joined this family pedi business. 
+				<h2 style="font-family:Arial;font-family:sansation">TEXTILE FIRM IN THE MAKING ...</h2>
+				<p>100 years back Shri Tekchand Himatmalji Kothari came to Mumbai from a remote village called Bagol in Rajasthan with a dream of realizing his potential in this city. Initially to sustain he worked in various firms in the city which also gave him a wider perspective and a deep understanding about various businesses. In a few years he was joined by his brother Shri Tilokchandji Himatmalji Kothari and both started a Adhat Pedhi in the name of Tilokchand Rajkamal Adat. The business started flourishing and Shri Vastimal Tilokchandji Kothari also joined this family pedi business. 
 				Thus the foundation was firmly laid for other ventures to come.
 				Shri Balchandji Kothari, son of Shri Vastimalji Kothari joined the family adat business. In 1981 he started the textile trading company specializing in uniform fabrics. In early 90’s Shri Balchandji Kothari launched the school uniform fabrics manufacturing unit.
 				Since then there has been no looking back, and today Darshan Valji Uniforms is amongst the largest and one of the most respected uniform manufacturing and exporting company of India.</p>
@@ -201,7 +246,7 @@
 			<div class="row">
 				<div class="col-md-4 animate-box">
 					<div class="services">
-						<div class="desc">
+						<div class="desc">  
 							<h3>Play School</h3>
 							<p>Our skin-friendly fabrics are extremely popular in the trade because of their softness and feel which is a must for the little toddlers in uniforms whose parents do not want any irritation on the sensitive skins of their child.</p>
 						</div>
@@ -297,7 +342,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-sm-6 animate-box">
-					<a href="#" class="item-grid">
+					<a onclick="openModal();currentSlide(1)" class="item-grid">
 						<div class="image" style="background-image: url(images/image_2.jpg)"></div>
 						<div class="v-align">
 							<div class="v-align-middle">
@@ -319,9 +364,42 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/image_2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="images/image_2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="images/a3.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="images/image_2.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
 </section>
 
-<section id="testimony">
+
+<!--<section id="testimony">
 	<div id="fh5co-testimony-section" class="fh5co-light-grey-section">
 		<div class="container">
 			<div class="row">
@@ -373,10 +451,10 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section>!-->
 
 <section id="showcase">
-	<div id="fh5co-pricing-section">
+	<div id="fh5co-pricing-section" class="fh5co-light-grey-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
@@ -389,8 +467,13 @@
 					<div class="col-md-4 animate-box">
 						<div class="price-box">
 							<h3 class="pricing-plan">Media</h3>
-							<div class="price"><sup class="currency">$</sup>9<small>/month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
 							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
 						</div>
 					</div>
@@ -404,9 +487,7 @@
 					</div>
 					<div class="col-md-4 animate-box">
 						<div class="price-box">
-							<h3 class="pricing-plan">Certification</h3>
-							<div class="price"><sup class="currency">$</sup>140<small>/month</small></div>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<h3 class="pricing-plan">Certification</h3>							
 							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
 						</div>
 					</div>
@@ -426,16 +507,64 @@
 		</div>
 	</div>
     <!-->
+<section id="contact">
+	<div class="fh5co-contact animate-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-md-push-2 fh5co-heading animate-box">
+					<h2>Contact Details</h2>
+					<p><i>"When the trust account is high, communication is easy, instant, and effective."</i></p><br><br>
+				</div>
+				<div class="col-md-3">
+					<h3>Contact Info.</h3>
+					<ul class="contact-info">
+						<li><i class="icon-map"></i>63/65, 1St Floor, Bhuleshwar, Dr A M Road, Chira Bazar, Mumbai, Maharashtra 400002</li>
+						<li><i class="icon-phone"></i>022 2240 0551</li>
+						<li><i class="icon-envelope"></i>darshan_valji@hotmail.com</li>
+						<li><i class="icon-globe"></i>www.darshanvalji.com</li>
+					</ul>
+				</div>
+				<div class="col-md-8 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input class="form-control" placeholder="Name" type="text">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<input class="form-control" placeholder="Email" type="text">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<input value="Send Message" class="btn btn-primary" type="submit">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div id="map" class="animate-box" data-animate-effect="fadeIn"></div>
+</section>
 	
 	<footer id="fh5co-footer" role="contentinfo">
 	
 		<div class="container">
-			<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+		
+		<!--<div class="col-md-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>About Us</h3>
 				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 				<p><a href="#" class="btn btn-primary btn-outline with-arrow btn-sm">Join Us <i class="icon-arrow-right"></i></a></p>
-			</div>
-			<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+			</div>!-->
+			<!--<div class="col-md-6 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Our Services</h3>
 				<ul class="float">
 					<li><a href="#">Web Design</a></li>
@@ -450,25 +579,28 @@
 					<li><a href="#">HandCrafted Templates</a></li>
 				</ul>
 
-			</div>
+			</div>!-->
 
-			<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
+			<!--<div class="col-md-2 col-md-push-1 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0">
 				<h3>Follow Us</h3>
 				<ul class="fh5co-social">
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
 					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<!--<li><a href="#"><i class="icon-twitter"></i></a></li>
 					<li><a href="#"><i class="icon-google-plus"></i></a></li>
 					<li><a href="#"><i class="icon-instagram"></i></a></li>
 				</ul>
+			</div>!-->
+			
+			<div class="col-md-6 col-md-push-3 col-sm-12 col-sm-push-0 col-xs-12 col-xs-push-0 text-center fh5co-social">
+				<h3>Follow Us</h3>	
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
 			</div>
-			
-			
 			<div class="col-md-12 fh5co-copyright text-center">
 				<p>&copy; 2017 Darshan Valji. All Rights Reserved. </p>	
 			</div>
 			
 		</div>
-	</footer>
+	</footer
 	</div>
 	
 	
