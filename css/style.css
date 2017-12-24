@@ -1513,7 +1513,7 @@ letter-spacing:0.2em;
 }
 
 /* The Modal (background) */
-.modal {
+.modal-changed {
   display: none;
   position: fixed;
   z-index: 1;
@@ -1527,7 +1527,7 @@ letter-spacing:0.2em;
 }
 
 /* Modal Content */
-.modal-content {
+.modal-content-changed {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -1573,6 +1573,7 @@ letter-spacing:0.2em;
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  background-color:rgba(22, 22, 22, 1);
 }
 
 /* Position the "next button" to the right */
@@ -1589,7 +1590,7 @@ letter-spacing:0.2em;
 
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
+  color: #ffffff
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;

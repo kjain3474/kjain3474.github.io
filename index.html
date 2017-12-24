@@ -26,6 +26,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -96,10 +98,7 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-	<!-- Start WOWSlider.com HEAD section -->
-<link rel="stylesheet" type="text/css" href="engine1/style.css" />
-<script type="text/javascript" src="engine1/jquery.js"></script>
-<!-- End WOWSlider.com HEAD section -->
+
 	</head>
     <body>
 	<div id="fh5co-page">
@@ -365,9 +364,9 @@ function showSlides(n) {
 		</div>
 	</div>
 	
-	<div id="myModal" class="modal">
+	<div id="myModal" class="modal-changed">
   <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+  <div class="modal-content-changed">
 
     <div class="mySlides">
       <div class="numbertext">1 / 23</div>
@@ -554,31 +553,28 @@ function showSlides(n) {
 			</div>
 			<div class="row">
 				<div class="pricing">
-					<div class="col-md-4 animate-box">
+					<div class="col-md-offset-3 col-md-4 animate-box">
 						<div class="price-box">
 							<h3 class="pricing-plan">Media</h3>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a href="http://www.ad-hoc-news.de/darshan-valji-to-display-the-latest-collection-at-mega-exhibitions-at-jaipur-on-7th-january-and-at-hyderabad-on-17th-january-2015--/de/News/40819498" class="btn btn-select-plan btn-sm" target="_blank">Ad Hoc News</a>
+							<a href="http://andhranews.net/intl/2014/darshan-valji-display-latest-collection-mega-3651.htm" class="btn btn-select-plan btn-sm" target="_blank">Andhra News</a>
+							<a href="http://www.bizwireexpress.com/showstorybwi.php?storyid=3828" class="btn btn-select-plan btn-sm" target="_blank">BizWire Express</a>
+							<a href="http://www.dsij.in/DesktopModules/XPRAccumulator/PressReleasePop.aspx?q=36307&s=businesswire-india" class="btn btn-select-plan btn-sm" target="_blank">Dalal street News</a>
 						</div>
 					</div>
 
-					<div class="col-md-4 animate-box">
+					<!-- <div class="col-md-4 animate-box">
 						<div class="price-box">
 							<h3 class="pricing-plan">Displays</h3>
 							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a><br>
 							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
 						</div>
-					</div>
+					</div> -->
 					<div class="col-md-4 animate-box">
 						<div class="price-box">
-							<h3 class="pricing-plan">Certification</h3>							
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<h3 class="pricing-plan">Certification</h3>
+							<a href="images/crisil.jpg" class="btn btn-select-plan btn-sm" target="_blank">CRISIL</a>
+							<a href="images/iso.jpg" class="btn btn-select-plan btn-sm" target="_blank">ISO</a>
 						</div>
 					</div>
 				</div>
@@ -587,6 +583,29 @@ function showSlides(n) {
 	</div>
 </section>
 
+<div class="modal" id="myModal1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Heading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          Modal body..
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 	<!--<div class="fh5co-cta" style="background-image: url(images/slide_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -693,12 +712,10 @@ function showSlides(n) {
 			</div>
 			
 		</div>
-	</footer
+	</footer>
 	</div>
+
 	
-	
-	<!-- jQuery -->
-	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
 	<script src="js/jquery.easing.1.3.js"></script>
 	<!-- Bootstrap -->
