@@ -494,7 +494,6 @@ h1, h2, h3, h4, h5, h6, figure {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  min-height: 700px;
 }
 #fh5co-hero .flexslider .flex-control-nav {
   bottom: 40px;
@@ -544,14 +543,14 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #d9534f;
 }
 
-#fh5co-services-section, #fh5co-work-section, #fh5co-testimony-section,
+#fh5co-about,#fh5co-services-section, #fh5co-work-section, #fh5co-testimony-section,
 #fh5co-blog-section {
   padding: 7em 0;
 }
 
 
 @media screen and (max-width: 768px) {
-  #fh5co-services-section, #fh5co-work-section, #fh5co-testimony-section,
+  #fh5co-about,#fh5co-services-section, #fh5co-work-section, #fh5co-testimony-section,
   #fh5co-blog-section {
     padding: 3em 0;
   }
@@ -559,7 +558,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 #fh5co-services-section .services {
   position: relative;
-   background-image:url("images\a1.jpg");
 }
 
 
@@ -586,6 +584,7 @@ h1, h2, h3, h4, h5, h6, figure {
   border-color:#555555;
   border-radius:50px;
   text-align:center;
+  
 }
 #fh5co-services-section .services .desc p{
 	margin-top:20px;
@@ -616,14 +615,13 @@ letter-spacing:0.2em;
 	border: 3px solid ;
 	border-image:   linear-gradient(to right, green 25%, yellow 50%,red 75%, black 100%) 100;
 	background: #fff url(../images/valji_image.jpg);
-	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
 }
 
 .bordershadow-blue{
 	border: 3px solid ;
-	border-image:   linear-gradient(to right, #27E1CE 25%, #30DEFE 50%,#30DEFE 75%, #27E1CE 100%) 100;
+	border-image: linear-gradient(to right, #27E1CE 25%, #30DEFE 50%,#30DEFE 75%, #27E1CE 100%) 50;
 
 }
 
@@ -668,7 +666,7 @@ letter-spacing:0.2em;
 }
 
 .title{
-	  color:#C9C9C9
+	    color: #888f94;
 	  }
 
 #fh5co-work-section .item-grid .v-align h5 {
@@ -763,21 +761,19 @@ letter-spacing:0.2em;
         }
 
 
-.fh5co-about .fh5co-heading h2{
+#fh5co-about .fh5co-heading h2{
 	font-size: 40px;
 	font-weight: 400;
 	text-shadow:3px 2px #C0C0C0
 }
 
-.fh5co-about .fh5co-heading p i{
+#fh5co-about .fh5co-heading p i{
 	letter-spacing:0.2em;
 }
 
-/*.fh5co-about{
-	border-top: 5px solid #27E1CE;
-	border-image:   linear-gradient(to right, green 25%, yellow 50%,red 75%, black 100%) 100;
+#fh5co-about{
+	  padding: 7em 0;
 }
-*/
 
 .flip-container {
 	perspective: 1000px;
@@ -803,7 +799,6 @@ letter-spacing:0.2em;
 /* hide back of pane during swap */
 .front{
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -949,7 +944,8 @@ letter-spacing:0.2em;
   text-align:center;
   text-decoration:none;
   font-size:1.5em;
-  font-family:aerial black
+  font-family:aerial black;
+  padding-top:15px
 }
 #fh5co-blog-section .item-grid .v-align h5 {
   color: rgba(0, 0, 0, 0.3);
@@ -1006,13 +1002,13 @@ letter-spacing:0.2em;
   color: #55acee;
 }
 
-.fh5co-about,
+#fh5co-about,
 .fh5co-team,
 .fh5co-contact {
   padding: 7em 0;
 }
 @media screen and (max-width: 768px) {
-  .fh5co-about,
+  #fh5co-about,
   .fh5co-team,
   .fh5co-contact {
     padding: 3em 0 10px 0;
@@ -1421,7 +1417,9 @@ letter-spacing:0.2em;
 #fh5co-pricing-section .price-box {
   text-align: center;
   padding: 30px;
-  background: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   margin-bottom: 40px;
   position: relative;
   -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
@@ -1439,9 +1437,9 @@ letter-spacing:0.2em;
   color: #27E1CE;
 }
 #fh5co-pricing-section .price-box .btn-select-plan {
-  padding: 10px 20px;
-  background: #5bc0de;
-  color: #fff;
+    padding: 10px 20px;
+    background: #000;
+    color: #C0C0C0;
 }
 #fh5co-pricing-section .price-box:hover, #fh5co-pricing-section .price-box:focus {
   -webkit-box-shadow: 0px 14px 25px -2px rgba(0, 0, 0, 0.14);
@@ -1452,15 +1450,15 @@ letter-spacing:0.2em;
 #fh5co-pricing-section .pricing-plan {
   margin: 0 0 50px 0;
   padding: 0;
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-size: 21px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #888f94;
   font-style:normal;
-  color:#27c1e1
+  color:#fff
+  /*#27c1e1*/
 }
-#fh5co-pricing-section .pricing-plan.pricing-plan-offer {
+#fh5co-pricing-section .pricing-plan .pricing-plan-offer {
   margin-bottom: 24px;
 }
 #fh5co-pricing-section .pricing-plan span {

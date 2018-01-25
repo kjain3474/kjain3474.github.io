@@ -65,24 +65,147 @@ function openModal() {
   document.getElementById('myModal').style.display = "block";
 }
 
+function openModal1() {
+  document.getElementById('myModal1').style.display = "block";
+}
+
+function openModal2() {
+  document.getElementById('myModal2').style.display = "block";
+}
+
+function openModal3() {
+  document.getElementById('myModal3').style.display = "block";
+}
+
+function openModal4() {
+  document.getElementById('myModal4').style.display = "block";
+}
+function openModal5() {
+  document.getElementById('myModal5').style.display = "block";
+}
+
+function openModal6() {
+  document.getElementById('myModal6').style.display = "block";
+}
+
+function openModal7() {
+  document.getElementById('myModal7').style.display = "block";
+}
+
 function closeModal() {
   document.getElementById('myModal').style.display = "none";
 }
 
+function closeModal1() {
+  document.getElementById('myModal1').style.display = "none";
+}
+
+function closeModal2() {
+  document.getElementById('myModal2').style.display = "none";
+}
+
+function closeModal3() {
+  document.getElementById('myModal3').style.display = "none";
+  var slides = document.getElementsByClassName("mySlides3");
+  slides.style.display="block";
+}
+
+function closeModal4() {
+  document.getElementById('myModal4').style.display = "none";
+  var slides = document.getElementsByClassName("mySlides4");
+  slides.style.display="block";
+}
+
+
+function closeModal5() {
+  document.getElementById('myModal5').style.display = "none";
+  var slides = document.getElementsByClassName("mySlides5");
+  slides.style.display="block";
+}
+
+
+function closeModal6() {
+  document.getElementById('myModal6').style.display = "none";
+  var slides = document.getElementsByClassName("mySlides6");
+  slides.style.display="block";
+}
+
+
+function closeModal7() {
+  document.getElementById('myModal7').style.display = "none";
+  var slides = document.getElementsByClassName("mySlides7");
+  slides.style.display="block";
+}
+
+
 var slideIndex = 1;
+showSlides1(slideIndex);
 showSlides(slideIndex);
+showSlides2(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
+}
+
+function plusSlides1(n) {
+  showSlides1(slideIndex += n);
+}
+
+function plusSlides2(n) {
+  showSlides2(slideIndex += n);
 }
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+function currentSlide1(n) {
+  showSlides1(slideIndex = n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex = n);
+}
+
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+function showSlides1(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides1");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+function showSlides2(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides2");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
@@ -163,7 +286,7 @@ function showSlides(n) {
 	</section>
 	
 <section id="AboutUs">
-<div class="fh5co-about animate-box fh5co-light-grey-section">
+<div id="fh5co-about" class="fh5co-light-grey-section">
 	<div class="container">
        <div class="row">
 		<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -268,7 +391,7 @@ function showSlides(n) {
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 animate-box">
+				<div class="col-md-offset-4 col-md-4 animate-box">
 					<div class="services">
 						<div class="desc">
 							<h3>Industrial</h3>
@@ -341,31 +464,112 @@ function showSlides(n) {
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-offset-3 col-md-6 col-sm-6 animate-box">
+				<div class="col-md-6 col-sm-6 animate-box">
 					<a onclick="openModal();currentSlide(1)" class="item-grid bordershadow-blue">
 						<div class="image" style="background-image: url(images/Dress_1.jpg)"></div>
 						<div class="v-align">
 							<div class="v-align-middle">
-								<h3 class="title">School Uniforms</h3>
+								<h3 class="title">Latest Collection</h3>
 							</div>
 						</div>
 					</a>
 				</div>
-				<!--<div class="col-md-6 col-sm-6 animate-box">
-					<a href="#" class="item-grid">
-						<div class="image" style="background-image: url(images/corporate.jpg)"></div>
+				<div class="col-md-3 col-sm-3 animate-box">
+					<a onclick="openModal3();" class="item-grid bordershadow-blue">
 						<div class="v-align">
 							<div class="v-align-middle">
-								<h3 class="title">collections 2</h3>
+								<h3 class="title">College</h3>
 							</div>
 						</div>
 					</a>
-				</div>-->
-			</div>
+				</div>
+				<div class="col-md-3 col-sm-3 animate-box">
+					<a onclick="openModal4();" class="item-grid bordershadow-blue">
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">Corporate</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 animate-box">
+					<a onclick="openModal5();" class="item-grid bordershadow-blue">
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">Industrial</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 animate-box">
+					<a onclick="openModal6();" class="item-grid bordershadow-blue">
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">Kids</h3>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-3 animate-box">
+					<a onclick="openModal7();" class="item-grid bordershadow-blue">
+						<div class="v-align">
+							<div class="v-align-middle">
+								<h3 class="title">School</h3>
+							</div>
+						</div>
+					</a>
+				</div>
 		</div>
 	</div>
+</div>	
 	
-	<div id="myModal" class="modal-changed">
+<div id="myModal3" class="modal-changed">
+  <span class="close cursor" onclick="closeModal3()">&times;</span>
+  <div class="modal-content-changed">
+	<div class="mySlides3">
+      <embed src="images/photo/A4 POSTER COLLEGE.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="580px" type='application/pdf'>
+    </div>
+ </div> 
+</div>
+
+<div id="myModal4" class="modal-changed">
+  <span class="close cursor" onclick="closeModal4()">&times;</span>
+  <div class="modal-content-changed">
+	<div class="mySlides4">
+      <embed src="images/photo/A4 POSTER CORPORATE.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="580px" type='application/pdf'>
+    </div>
+ </div> 
+</div>
+
+<div id="myModal5" class="modal-changed">
+  <span class="close cursor" onclick="closeModal5()">&times;</span>
+  <div class="modal-content-changed">
+	<div class="mySlides5">
+      <embed src="images/photo/A4 POSTER INDUSTRIAL.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="580px" type='application/pdf'>
+    </div>
+ </div> 
+</div>
+
+<div id="myModal6" class="modal-changed">
+  <span class="close cursor" onclick="closeModal6()">&times;</span>
+  <div class="modal-content-changed">
+	<div class="mySlides5">
+      <embed src="images/photo/A4 POSTER KIDS.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="580px" type='application/pdf'>
+    </div>
+ </div> 
+</div>
+
+<div id="myModal7" class="modal-changed">
+  <span class="close cursor" onclick="closeModal7()">&times;</span>
+  <div class="modal-content-changed">
+	<div class="mySlides7">
+      <embed src="images/photo/A4 POSTER SCHOOL.pdf#toolbar=0&navpanes=0&scrollbar=0" width="100%" height="580px" type='application/pdf'>
+    </div>
+ </div> 
+</div>
+
+
+<div id="myModal" class="modal-changed">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content-changed">
 
@@ -485,6 +689,8 @@ function showSlides(n) {
     <div class="caption-container">
       <p id="caption"></p>
     </div>
+</div>
+</div>
 
 </section>
 
@@ -554,8 +760,8 @@ function showSlides(n) {
 			</div>
 			<div class="row">
 				<div class="pricing">
-					<div class="col-md-offset-3 col-md-4 animate-box">
-						<div class="price-box">
+					<div class="col-md-4 animate-box">
+						<div class="price-box" style="background: rgba(0,146,63,50);">
 							<h3 class="pricing-plan">Media</h3>
 							<a href="http://www.ad-hoc-news.de/darshan-valji-to-display-the-latest-collection-at-mega-exhibitions-at-jaipur-on-7th-january-and-at-hyderabad-on-17th-january-2015--/de/News/40819498" class="btn btn-select-plan btn-sm" target="_blank">Ad Hoc News</a>
 							<a href="http://andhranews.net/intl/2014/darshan-valji-display-latest-collection-mega-3651.htm" class="btn btn-select-plan btn-sm" target="_blank">Andhra News</a>
@@ -564,15 +770,16 @@ function showSlides(n) {
 						</div>
 					</div>
 
-					<!-- <div class="col-md-4 animate-box">
-						<div class="price-box">
+					 <div class="col-md-4 animate-box" >
+						<div class="price-box" style="background: rgba(255,245,0,50)">
 							<h3 class="pricing-plan">Displays</h3>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a><br>
-							<a href="#" class="btn btn-select-plan btn-sm">Select Plan</a>
+							<a onclick="openModal1();currentSlide1(1)" class="btn btn-select-plan btn-sm">Vijaywada Display</a><br>
+							<a onclick="openModal2();currentSlide2(1)" class="btn btn-select-plan btn-sm">Solapur Dispay</a>
 						</div>
-					</div> -->
-					<div class="col-md-4 animate-box">
-						<div class="price-box">
+					</div>
+					
+					<div class="col-md-4 animate-box" >
+						<div class="price-box" style="background: rgba(218,37,28,50)">
 							<h3 class="pricing-plan">Certification</h3>
 							<a href="images/crisil.jpg" class="btn btn-select-plan btn-sm" target="_blank">CRISIL</a>
 							<a href="images/iso.jpg" class="btn btn-select-plan btn-sm" target="_blank">ISO</a>
@@ -582,31 +789,123 @@ function showSlides(n) {
 			</div>
 		</div>
 	</div>
-</section>
 
-<div class="modal" id="myModal1">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Modal Heading</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          Modal body..
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-        
-      </div>
+
+<div id="myModal1" class="modal-changed">
+  <span class="close cursor" onclick="closeModal1()">&times;</span>
+  <div class="modal-content-changed">
+
+    <div class="mySlides1">
+      <div class="numbertext">1 / 3</div>
+      <img src="images/vijaywada/DSC_0040.jpg" style="width:100%">
     </div>
-  </div>
+
+	<div class="mySlides1">
+      <div class="numbertext">2 / 3</div>
+      <img src="images/vijaywada/DSC_0097.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides1">
+      <div class="numbertext">3 / 3</div>
+      <img src="images/vijaywada/DSC_0100.jpg" style="width:100%">
+    </div>
+	
+    <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+</div>
+</div>
+
+<div id="myModal2" class="modal-changed">
+  <span class="close cursor" onclick="closeModal2()">&times;</span>
+  <div class="modal-content-changed">
+
+    <div class="mySlides2">
+      <div class="numbertext">1 / 15</div>
+      <img src="images/solapur/DSC_8501.jpg" style="width:100%">
+    </div>
+
+	<div class="mySlides2">
+      <div class="numbertext">2 / 15</div>
+      <img src="images/solapur/DSC_8505.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">3 / 15</div>
+      <img src="images/solapur/DSC_8508.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">4 / 15</div>
+      <img src="images/solapur/DSC_8512.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">5 / 15</div>
+      <img src="images/solapur/DSC_8516.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">6 / 15</div>
+      <img src="images/solapur/DSC_8526.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">7 / 15</div>
+      <img src="images/solapur/DSC_8531.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">8 / 15</div>
+      <img src="images/solapur/DSC_8541.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">9 / 15</div>
+      <img src="images/solapur/DSC_8545.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">10 / 15</div>
+      <img src="images/solapur/DSC_8551.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">11 / 15</div>
+      <img src="images/solapur/DSC_8558.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">12 / 15</div>
+      <img src="images/solapur/DSC_8581.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">13 / 15</div>
+      <img src="images/solapur/DSC_8624.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">14 / 15</div>
+      <img src="images/solapur/DSC_8680.jpg" style="width:100%">
+    </div>
+	
+	<div class="mySlides2">
+      <div class="numbertext">15 / 15</div>
+      <img src="images/solapur/DSC_8693.jpg" style="width:100%">
+    </div>
+	
+    <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+</div>
+</div>
 	<!--<div class="fh5co-cta" style="background-image: url(images/slide_2.jpg);">
 		<div class="overlay"></div>
 		<div class="container">
@@ -617,6 +916,10 @@ function showSlides(n) {
 		</div>
 	</div>
     <!-->
+	
+</section>
+
+
 <section id="contact">
 	<div class="fh5co-contact animate-box">
 		<div class="container">
