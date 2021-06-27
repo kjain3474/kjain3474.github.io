@@ -1,106 +1,201 @@
+@font-face {
+  font-family: comfortaa-light;
+  src: url(../fonts/Comfortaa-Light.ttf);
+}
+
+@font-face {
+  font-family: comfortaa-medium;
+  src: url(../fonts/Comfortaa-Medium.ttf);
+}
+
+@font-face {
+  font-family: comfortaa-bold;
+  src: url(../fonts/Comfortaa-Bold.ttf);
+}
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #f1f3f6;
-  }
-  
-  .container {
-    width: 100%;
-    height: 97vh;
-  }
-  
-  svg {
-    width: 80%;
-    filter: drop-shadow( -1px -1px 1px rgb(55, 84, 170, 0.2));
-  }
-  
-  .draw {
+  background-color: #f1f3f6;
+  font-family: comfortaa-light;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+.loader{
+  height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+  flex-direction: column;
+	position:relative;
+  z-index: 999999;
+}
+
+.loader-text {
+  color: #f1f3f6;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
+  -6px -6px 12px rgba(255,255,255);
+  outline: none;
+  font-size: 2em;
+  text-transform:uppercase;
+  font-family: comfortaa-bold;
+  letter-spacing: 5px;
+}
+
+svg {
+  width: 80%;
+  filter: drop-shadow( -1px -1px 1px rgb(55, 84, 170, 0.2));
+}
+
+.draw {
+  opacity: 0;
+  transition: opacity ease-in-out 1s;
+}
+
+.prints {
+  opacity: 0;
+}
+
+.button {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: #f1f3f6;
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 0 15px rgba(55, 84, 170, 0), 
+    inset 0 0 20px rgba(255, 255, 255, 0), 
+    10px 10px 18px rgba(55, 84, 170, 0.15), 
+    -10px -10px 22px white, 
+    inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  transition: box-shadow 0.7s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  font-size: 0;
+}
+
+.button:hover, .button:focus {
+  box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.button:hover .draw {
+  opacity: 0.4;
+}
+.button:hover .prints{
+  opacity: 1;
+  transition: opacity ease-in-out 0.8s;
+}
+
+.button:before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #f1f3f6;
+  border-radius: 50%;
+  position: absolute;
+  top: 110%;
+  box-shadow: inset 2px 2px 5px rgba(55, 84, 170, 0.15), inset -2px -2px 5px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.button:after {
+  --color: #ff99ac;
+  content: '';
+  width: 3px;
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(110% + 6px);
+  z-index: 9999;
+  box-shadow: inset 0px 0px 1px var(--color), 
+    0px 0px 2px var(--color), 
+    0px 0px 3px var(--color), 
+    0px 0px 4px var(--color),
+    0px 0px 5px var(--color),
+    0px 0px 6px var(--color),
+    0px 0px 7px var(--color),
+    0px 0px 20px var(--color),
+    0px 0px 15px var(--color);
+  animation: flash 0.6s infinite alternate forwards;
+  transition: box-shadow 0.7s ease-in-out 0.5s;
+}
+
+.button:hover:after {
+  --color: aqua;
+}
+
+@keyframes flash {
+  0% {
     opacity: 0;
-    transition: opacity ease-in-out 1s;
   }
-  
-  .prints {
-    opacity: 0;
-  }
-  
-  .button {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    background: #f1f3f6;
-    border-radius: 50%;
-    box-shadow: 
-      inset 0 0 15px rgba(55, 84, 170, 0), 
-      inset 0 0 20px rgba(255, 255, 255, 0), 
-      10px 10px 18px rgba(55, 84, 170, 0.15), 
-      -10px -10px 22px white, 
-      inset 0px 0px 4px rgba(255, 255, 255, 0.2);
-    transition: box-shadow 0.7s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    outline: none;
-    border: none;
-    font-size: 0;
-  }
-  
-  .button:hover, .button:focus {
-    box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
-  }
-  
-  .button:hover .draw {
-    opacity: 0.4;
-  }
-  .button:hover .prints{
+  100% {
     opacity: 1;
-    transition: opacity ease-in-out 0.8s;
   }
-  
-  .button:before {
-    content: '';
-    width: 14px;
-    height: 14px;
-    background-color: #f1f3f6;
-    border-radius: 50%;
-    position: absolute;
-    top: 110%;
-    box-shadow: inset 2px 2px 5px rgba(55, 84, 170, 0.15), inset -2px -2px 5px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
+}
+
+.heart-rate {
+  width: 200px;
+  height: 73px;
+  position: relative;
+  margin: 20px auto;
+  padding-left: 40px;
+}
+
+.fade-in {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f3f6;
+  top: 0;
+  right: 0;
+  animation: heartRateIn 3s linear infinite;
+}
+
+.fade-out {
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -120%;
+  animation: heartRateOut 3s linear infinite;
+  background: rgba(241,243,246,1);
+  background: -moz-linear-gradient(left, rgba(241,243,246,1) 0%, rgba(241,243,246,1) 50%, rgba(241,243,246,0) 100%);
+  background: -webkit-linear-gradient(left, rgba(241,243,246,1) 0%, rgba(241,243,246,1) 50%, rgba(241,243,246,0) 100%);
+  background: -o-linear-gradient(left, rgba(241,243,246,1) 0%, rgba(241,243,246,1) 50%, rgba(241,243,246,0) 100%);
+  background: -ms-linear-gradient(left, rgba(241,243,246,1) 0%, rgba(241,243,246,1) 50%, rgba(241,243,246,0) 100%);
+  background: linear-gradient(to right, rgba(241,243,246,1) 0%, rgba(241,243,246,1) 80%, rgba(241,243,246,0) 100%);
+}
+
+@keyframes heartRateIn {
+  0% {
+    width: 100%;
   }
-  
-  .button:after {
-    --color: #ff99ac;
-    content: '';
-    width: 3px;
-    height: 3px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: calc(110% + 6px);
-    z-index: 9999;
-    box-shadow: inset 0px 0px 1px var(--color), 
-      0px 0px 2px var(--color), 
-      0px 0px 3px var(--color), 
-      0px 0px 4px var(--color),
-      0px 0px 5px var(--color),
-      0px 0px 6px var(--color),
-      0px 0px 7px var(--color),
-      0px 0px 20px var(--color),
-      0px 0px 15px var(--color);
-    animation: flash 0.6s infinite alternate forwards;
-    transition: box-shadow 0.7s ease-in-out 0.5s;
+  50% {
+    width: 0;
   }
-  
-  .button:hover:after {
-    --color: aqua;
+  100% {
+    width: 0;
   }
-  
-  @keyframes flash {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+}
+
+@keyframes heartRateOut {
+  0% {
+    left: -120%;
   }
+  30% {
+    left: -120%;
+  }
+  100% {
+    left: 0;
+  }
+}
