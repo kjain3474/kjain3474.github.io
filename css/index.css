@@ -15,6 +15,7 @@
 
 body {
   background-color: #f1f3f6;
+  color: #484849;
   font-family: comfortaa-light;
 }
 
@@ -35,18 +36,40 @@ html, body{
 	justify-content:center;
   flex-direction: column;
 	position:relative;
-  z-index: 999999;
 }
 
 .loader-text {
   color: #f1f3f6;
-  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1),
-  -6px -6px 12px rgba(255,255,255);
+  text-shadow: 3px 3px 6px rgba(10, 10, 10, 0.1),
+  -4px -4px 8px rgba(255,255,255);
   outline: none;
   font-size: 2em;
   text-transform:uppercase;
   font-family: comfortaa-bold;
   letter-spacing: 5px;
+  font-weight: bolder;
+}
+
+.fingerprint{
+  height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+  flex-direction: column;
+	position:relative;
+  text-align: center;
+}
+
+.fingerprint-text {
+  /*color: #f1f3f6;*/
+  text-shadow: 3px 3px 6px rgba(10, 10, 10, 0.1),
+  -4px -4px 8px rgba(255,255,255);
+  outline: none;
+  font-size: 2em;
+  text-transform:uppercase;
+  font-family: comfortaa-bold;
+  letter-spacing: 5px;
+  font-weight: bolder;
 }
 
 svg {
