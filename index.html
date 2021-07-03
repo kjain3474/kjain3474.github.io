@@ -3,8 +3,13 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#D8DADD" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#f1f3f6" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/ico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/ico/favicon-16x16.png">
+    <link rel="manifest" href="img/ico/site.webmanifest">
+
 
     <!-- Bootstrap CSS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -41,9 +46,8 @@
       </div>
 
       <div class="fingerprint" style="display: none;">
-        <h1><span class="fingerprint-text">Lets Enter the world of 3d</span></h1>
-        <button class='button' type='button' style="margin-top: 10vh;">
-          press to scan fingerprint
+        <h1><span class="fingerprint-text">Enter the world of 3d</span></h1>
+        <button id="fingerprint" class='button' type='button' style="margin-top: 10vh;">
           <svg xmlns="http://www.w3.org/2000/svg" id="OBJECTS" viewBox="0 0 103.051 102">
             <defs>
               <pattern id="gif" height="100%" width="100%" patternContentUnits="objectBoundingBox">
@@ -134,7 +138,13 @@
           </svg>
         </button>      
       </div>
-    
+
+
+      <section id="main" style="display: none;">
+        <img src="img/cover.png" style="width: 100%; height: 100%;">
+      </section>
+
+      
     </div>
     
 

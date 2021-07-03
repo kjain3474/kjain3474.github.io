@@ -41,9 +41,9 @@ html, body{
 .loader-text {
   color: #f1f3f6;
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1),
-  -3px -3px 6px rgba(255,255,255);
+  -3px -3px 8px rgba(255,255,255);
   outline: none;
-  font-size: 2em;
+  font-size: 2.5em;
   text-transform:uppercase;
   font-family: comfortaa-bold;
   letter-spacing: 5px;
@@ -58,32 +58,6 @@ html, body{
   flex-direction: column;
 	position:relative;
   text-align: center;
-}
-
-.fingerprint-text {
-  color: #f1f3f6;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1),
-  -3px -3px 6px rgba(255,255,255);
-  outline: none;
-  font-size: 2em;
-  text-transform:uppercase;
-  font-family: comfortaa-bold;
-  letter-spacing: 5px;
-  font-weight: bolder;
-}
-
-svg {
-  width: 80%;
-  filter: drop-shadow( -1px -1px 1px rgb(55, 84, 170, 0.2));
-}
-
-.draw {
-  opacity: 0;
-  transition: opacity ease-in-out 1s;
-}
-
-.prints {
-  opacity: 0;
 }
 
 .div {
@@ -104,6 +78,32 @@ svg {
   outline: none;
   border: none;
   font-size: 0;
+}
+
+.fingerprint-text {
+  color: #f1f3f6;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1),
+  -3px -3px 8px rgba(255,255,255);
+  outline: none;
+  font-size: 2.5em;
+  text-transform:uppercase;
+  font-family: comfortaa-bold;
+  letter-spacing: 5px;
+  font-weight: bolder;
+}
+
+svg {
+  width: 80%;
+  filter: drop-shadow( -1px -1px 1px rgb(55, 84, 170, 0.2));
+}
+
+.draw {
+  opacity: 0;
+  transition: opacity ease-in-out 1s;
+}
+
+.prints {
+  opacity: 0;
 }
 
 .button {
@@ -127,13 +127,14 @@ svg {
   font-size: 0;
 }
 
-.button:hover, .button:focus {
+.button:active, .button:focus {
   box-shadow: inset 7px 7px 15px rgba(55, 84, 170, 0.15), inset -7px -7px 20px white, 0px 0px 4px rgba(255, 255, 255, 0.2);
 }
 
 .button:hover .draw {
   opacity: 0.4;
 }
+
 .button:hover .prints{
   opacity: 1;
   transition: opacity ease-in-out 0.8s;
