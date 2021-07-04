@@ -13,6 +13,13 @@
   src: url(../fonts/Comfortaa-Bold.ttf);
 }
 
+:root {
+  --primary-light: #00CCFF;
+  --primary: #5A72FE;
+  --primary-dark: #8B41FE;
+  --white: #FFFFFF;
+}
+
 body {
   background-color: #f1f3f6;
   color: #484849;
