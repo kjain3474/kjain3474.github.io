@@ -3,6 +3,6 @@ $(window).load(function() {
       $(".loader").fadeOut(3000);
    }, 2000);
    setTimeout(function(){  
-      $("#fingerprint").fadeIn(3000);
+      $("#fingerprint-class").fadeIn(3000);
    }, 4000);
 });

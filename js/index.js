@@ -3,7 +3,7 @@ $(document).ready(function() {
     $("#fingerprint").hover(function(){
         timeout = setTimeout(function(){
             $t = 0;
-            $("#fingerprint").fadeOut(3000);
+            $("#fingerprint-class").fadeOut(3000);
             setTimeout(function(){  
                 $("#main").fadeIn(3000);
             }, 3000)
